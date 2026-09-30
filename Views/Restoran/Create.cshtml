@@ -1,0 +1,30 @@
+@model zadatak.Models.Restoran
+
+<h1>Dodaj restoran</h1>
+
+<form asp-action="Create" method="post">
+
+    <div>
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <span asp-validation-for="Naziv"></span>
+    </div>
+
+
+    <div>
+    <label asp-for="Adresa"></label>
+    <input asp-for="Adresa" />
+    <span asp-validation-for="Adresa"></span>
+    </div>
+
+    
+    <div>
+    <label asp-for="Telefon"></label>
+    <input asp-for="Telefon" />
+    <span asp-validation-for="Telefon"></span>
+    </div>
+
+   
+   <button type="submit">Dodaj</button>
+
+</form>

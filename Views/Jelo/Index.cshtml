@@ -1,0 +1,9 @@
+@model IEnumerable<zadatak.Models.Jelo>
+
+<h1>Jela</h1>
+@foreach (zadatak.Models.Jelo jelo in Model)
+{
+    <p>@jelo.Naziv</p>
+    <p>@jelo.Cijena</p>
+    <p>@jelo.RestoranId</p>
+}

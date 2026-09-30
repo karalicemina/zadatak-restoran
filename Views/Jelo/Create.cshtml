@@ -1,0 +1,31 @@
+@model zadatak.Models.Jelo
+
+<h1>Dodaj jelo</h1>
+
+<form asp-action="Create" method="post">
+
+    <div>
+    <label asp-for="Naziv"></label>
+    <input asp-for="Naziv" />
+    <span asp-validation-for="Naziv"></span>
+    </div>
+
+    <div>
+    <label asp-for="Cijena"></label>
+    <input asp-for="Cijena" />
+    <span asp-validation-for="Cijena"></span>
+    </div>
+
+    <div>
+    <label asp-for="RestoranId">Restoran</label>
+      <select asp-for="RestoranId">
+        @foreach (var restoran in ViewBag.Restorani)
+        {
+            <option value="@restoran.Id">@restoran.Naziv</option>
+        }
+      </select>
+    </div>
+
+    <button type="submit">Dodaj</button>
+
+</form>

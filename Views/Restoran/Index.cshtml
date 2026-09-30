@@ -1,0 +1,9 @@
+@model IEnumerable<zadatak.Models.Restoran>
+
+<h1>Restorani</h1>
+@foreach (zadatak.Models.Restoran restoran in Model)
+{
+    <p>@restoran.Naziv</p>
+    <p>@restoran.Adresa</p>
+    <p>@restoran.Telefon</p>
+}
